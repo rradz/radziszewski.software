@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostList from '../../components/PostList.astro';
+import { getPosts } from '../../lib/posts';
+
+const posts = await getPosts();
+---
+
+<Base title="Blog" description="Notes on backend engineering, Elixir, LLM products and building small apps.">
+	<h1>Blog</h1>
+	{posts.length > 0 ? <PostList posts={posts} /> : <p class="muted">Nothing here yet. First posts are on the way.</p>}
+	<p class="muted rss">Follow along with <a href="/rss.xml">RSS</a>.</p>
+</Base>
+
+<style>
+	.rss {
+		margin-top: 2rem;
+		font-size: 0.875rem;
+	}
+</style>

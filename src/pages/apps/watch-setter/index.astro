@@ -1,0 +1,156 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { apps } from '../../../data/apps';
+
+const app = apps.find((a) => a.slug === 'watch-setter')!;
+
+const shots = [
+	{ src: '1-main.jpg', alt: 'The main screen: a countdown, the time to set, date, day, month, year, GMT hour and moon phase.' },
+	{ src: '2-now.jpg', alt: 'The countdown at zero, showing Now.' },
+	{ src: '3-gmt-zone.jpg', alt: 'Picking the time zone for the GMT hand.' },
+	{ src: '4-quickset.jpg', alt: 'The date quickset warning, shown while the date wheel is engaged.' },
+];
+
+const features = [
+	['Countdown to the minute', 'Light taps on the last three seconds, a buzz and a tick at zero. The clock is checked against Apple’s time server, so it runs on real time.'],
+	['Every calendar value', 'Date, day, month and year for the watch’s calendar windows.'],
+	['GMT hand', 'The hour on a 24-hour scale, in any zone you pick.'],
+	['Moon phase', 'How many clicks to advance the disc from new or full moon, whichever is nearer, for the northern or southern hemisphere.'],
+	['Date quickset warning', 'Tells you when the date wheel is engaged (9 PM – 3 AM) and quicksetting could damage the movement.'],
+	['Nothing collected', 'No accounts, no analytics, no ads. The screen stays on while the app is open.'],
+];
+---
+
+<Base title={app.name} description="One screen for setting a mechanical watch: a countdown to push the crown in, the time to set, and every calendar, GMT and moon-phase value.">
+	<header class="hero">
+		<img class="icon" src={app.icon} alt="" width="96" height="96" />
+		<div>
+			<h1>{app.name}</h1>
+			<p class="tagline">{app.tagline}</p>
+			{
+				app.appStoreUrl ? (
+					<a class="store" href={app.appStoreUrl}>Download on the App Store</a>
+				) : (
+					<p class="store pending">Coming soon to the App Store · iPhone, iOS 26</p>
+				)
+			}
+		</div>
+	</header>
+
+	<p class="lede">
+		Everything you need to set a mechanical watch on one screen. Open it, set the watch, close it.
+	</p>
+
+	<div class="shots" role="list">
+		{
+			shots.map((shot) => (
+				<img role="listitem" src={`/apps/watch-setter/${shot.src}`} alt={shot.alt} width="600" height="1304" loading="lazy" />
+			))
+		}
+	</div>
+
+	<dl class="features">
+		{
+			features.map(([title, body]) => (
+				<div>
+					<dt>{title}</dt>
+					<dd>{body}</dd>
+				</div>
+			))
+		}
+	</dl>
+
+	<p class="links">
+		<a href="/apps/watch-setter/support/">Support</a>
+		<a href="/apps/watch-setter/privacy/">Privacy policy</a>
+	</p>
+</Base>
+
+<style>
+	.hero {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.icon {
+		flex: none;
+		border-radius: 22.5%;
+		box-shadow: 0 0 0 1px var(--line);
+	}
+
+	h1 {
+		margin-bottom: 0.15rem;
+	}
+
+	.tagline {
+		margin: 0 0 0.6rem;
+		color: var(--muted);
+	}
+
+	.store {
+		display: inline-block;
+		margin: 0;
+		padding: 0.4rem 0.85rem;
+		border-radius: 8px;
+		background: var(--text);
+		color: var(--bg);
+		font-size: 0.875rem;
+		font-weight: 550;
+		text-decoration: none;
+	}
+
+	.store.pending {
+		background: var(--accent-soft);
+		color: var(--accent);
+	}
+
+	.lede {
+		font-size: 1.1875rem;
+	}
+
+	.shots {
+		display: flex;
+		gap: 0.75rem;
+		margin: 2rem calc(-1 * var(--gutter));
+		padding: 0 var(--gutter) 0.5rem;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+	}
+
+	.shots img {
+		flex: none;
+		width: min(42vw, 13rem);
+		border-radius: 18px;
+		border: 1px solid var(--line);
+		scroll-snap-align: start;
+	}
+
+	.features {
+		display: grid;
+		gap: 1.25rem 2rem;
+		margin: 0 0 2rem;
+	}
+
+	@media (min-width: 40rem) {
+		.features {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	dt {
+		font-weight: 600;
+	}
+
+	dd {
+		margin: 0.15rem 0 0;
+		color: var(--muted);
+		font-size: 0.9375rem;
+	}
+
+	.links {
+		display: flex;
+		gap: 1.25rem;
+	}
+</style>

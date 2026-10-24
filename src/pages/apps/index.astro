@@ -1,0 +1,21 @@
+---
+import Base from '../../layouts/Base.astro';
+import AppCard from '../../components/AppCard.astro';
+import { apps } from '../../data/apps';
+---
+
+<Base title="Apps" description="Small, focused iPhone apps.">
+	<h1>Apps</h1>
+	<p class="muted">Small, focused iPhone apps. No accounts, no tracking.</p>
+	<div class="list">
+		{apps.map((app) => <AppCard app={app} />)}
+	</div>
+</Base>
+
+<style>
+	.list {
+		display: grid;
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+</style>

@@ -1,0 +1,208 @@
+---
+import Base from '../layouts/Base.astro';
+import AppCard from '../components/AppCard.astro';
+import PostList from '../components/PostList.astro';
+import { site } from '../data/site';
+import { apps } from '../data/apps';
+import { getPosts } from '../lib/posts';
+
+const posts = (await getPosts()).slice(0, 5);
+
+const offers = [
+	{
+		title: 'First version of a backend',
+		body: 'For a new product that needs to reach real users quickly: requirements worked out with you, trade-offs chosen for fast validation, and a system I can hand over in good shape.',
+	},
+	{
+		title: 'LLM features that hold up in production',
+		body: 'Orchestration, context and memory management, and the post-processing that turns model output into something a product can rely on.',
+	},
+	{
+		title: 'Elixir and OTP help',
+		body: 'Reviews, performance and reliability work, and refactoring legacy paths in existing Elixir codebases.',
+	},
+	{
+		title: 'A second opinion on architecture',
+		body: 'A short review of a design or a running system, ending in a written report with concrete recommendations.',
+	},
+];
+
+const history = [
+	{ years: '2025–26', role: 'Founding engineer', where: 'Ember Couples', note: 'AI relationship coaching app' },
+	{ years: '2022–24', role: 'Senior server engineer', where: 'Laguna Games', note: 'CryptoUnicorns' },
+	{ years: '2021–22', role: 'Team lead, storage', where: 'V7', note: 'employee #13' },
+	{ years: '2017–20', role: 'Backend developer', where: 'Nedap Healthcare', note: 'authorization and real-time transport' },
+	{ years: '2016–17', role: 'Co-founder, lead engineer', where: 'Tripop', note: 'travel platform' },
+	{ years: '2014–16', role: 'Backend developer', where: 'AppUnite', note: 'greenfield client projects' },
+];
+---
+
+<Base>
+	<section class="intro">
+		<p class="label">Poznań, Poland · remote</p>
+		<h1>{site.name}</h1>
+		<p class="lede">
+			I'm a backend engineer with 11+ years of experience, mostly building new products, often as the first
+			engineer, working directly with founders. I specialise in Elixir, OTP and distributed systems, and
+			lately in LLM-based products.
+		</p>
+		<p class="available"><span class="dot" aria-hidden="true"></span>Available for short engagements</p>
+		<p class="cta">
+			<a class="button" href={`mailto:${site.email}`}>{site.email}</a>
+			<a href={site.linkedin}>LinkedIn</a>
+			<a href={site.github}>GitHub</a>
+		</p>
+	</section>
+
+	<section>
+		<h2>What I can help with</h2>
+		<div class="offers">
+			{
+				offers.map((offer) => (
+					<div>
+						<h3>{offer.title}</h3>
+						<p>{offer.body}</p>
+					</div>
+				))
+			}
+		</div>
+		<p class="muted">
+			Work is scoped to weeks, not years, and the length is agreed upfront. If you're not sure your project
+			fits, write anyway.
+		</p>
+	</section>
+
+	<section>
+		<h2>Background</h2>
+		<ol class="history">
+			{
+				history.map((item) => (
+					<li>
+						<span class="years">{item.years}</span>
+						<span>
+							{item.role}, <strong>{item.where}</strong>
+							<span class="muted"> — {item.note}</span>
+						</span>
+					</li>
+				))
+			}
+		</ol>
+		<p class="muted small">
+			Elixir · Phoenix · Ruby on Rails · Python · TypeScript · PostgreSQL · Redis · AWS · GCP · Docker
+		</p>
+	</section>
+
+	<section>
+		<h2>Apps</h2>
+		{apps.map((app) => <AppCard app={app} />)}
+	</section>
+
+	{
+		posts.length > 0 && (
+			<section>
+				<h2>Writing</h2>
+				<PostList posts={posts} />
+			</section>
+		)
+	}
+</Base>
+
+<style>
+	.intro {
+		padding-top: 1rem;
+	}
+
+	.lede {
+		font-size: 1.1875rem;
+		line-height: 1.55;
+	}
+
+	.available {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin: 0.5rem 0 1.5rem;
+		padding: 0.3rem 0.75rem;
+		border-radius: 999px;
+		background: var(--accent-soft);
+		color: var(--accent);
+		font-size: 0.875rem;
+		font-weight: 550;
+	}
+
+	.dot {
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius: 50%;
+		background: currentColor;
+	}
+
+	.cta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.75rem 1.25rem;
+	}
+
+	.button {
+		display: inline-block;
+		padding: 0.55rem 1rem;
+		border-radius: 8px;
+		background: var(--text);
+		color: var(--bg);
+		text-decoration: none;
+		font-weight: 550;
+		overflow-wrap: anywhere;
+	}
+
+	.button:hover {
+		background: var(--accent);
+		color: var(--bg);
+	}
+
+	.offers {
+		display: grid;
+		gap: 1.25rem 2rem;
+		margin-bottom: 1.25rem;
+	}
+
+	@media (min-width: 40rem) {
+		.offers {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	.offers h3 {
+		font-size: 1rem;
+		font-weight: 600;
+		margin: 0 0 0.25rem;
+	}
+
+	.offers p {
+		margin: 0;
+		color: var(--muted);
+		font-size: 0.9375rem;
+	}
+
+	.history {
+		list-style: none;
+		margin: 0 0 1rem;
+		padding: 0;
+	}
+
+	.history li {
+		display: grid;
+		grid-template-columns: 4.5rem 1fr;
+		gap: 1rem;
+		padding: 0.35rem 0;
+	}
+
+	.years {
+		font: 0.8125rem/1.9 var(--mono);
+		color: var(--muted);
+	}
+
+	.small {
+		font-size: 0.875rem;
+	}
+</style>
