@@ -1,21 +1,21 @@
 ---
 import Base from '../../layouts/Base.astro';
-import AppCard from '../../components/AppCard.astro';
 import { apps } from '../../data/apps';
 ---
 
-<Base title="Apps" description="Small, focused iPhone apps.">
-	<h1>Apps</h1>
-	<p class="muted">Small, focused iPhone apps. No accounts, no tracking.</p>
-	<div class="list">
-		{apps.map((app) => <AppCard app={app} />)}
-	</div>
-</Base>
+<Base title="Apps" description="An ongoing project exploring design through deliberately small apps.">
+	<h1>Delightful software</h1>
+	<p>
+		Most apps grow until their feature lists read like manuals, and get harder to use with every release. This is an
+		ongoing project that goes the other way: exploring design by making apps that are small on purpose.
+	</p>
+	<p>
+		Each one does a single job, and the work goes into doing that job well rather than into doing more. The
+		guiding idea is Dieter Rams’s: less, but better. They are paid for once, with no subscriptions and no tracking.
+	</p>
 
-<style>
-	.list {
-		display: grid;
-		gap: 1rem;
-		margin-top: 2rem;
-	}
-</style>
+	<h2>Apps</h2>
+	<ul>
+		{apps.map((app) => <li><a href={`/apps/${app.slug}/`}>{app.name}</a> — {app.tagline}</li>)}
+	</ul>
+</Base>

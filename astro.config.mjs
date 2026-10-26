@@ -5,4 +5,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://radziszewski.software',
 	integrations: [sitemap()],
+	build: { inlineStylesheets: 'always' },
+	devToolbar: { enabled: false },
 });

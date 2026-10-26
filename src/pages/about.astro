@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+
+<Base title="About" description="Radziszewski Software is run by Rafał Radziszewski, a backend engineer and consultant.">
+	<h1>About</h1>
+	<p>
+		{site.name} is run by Rafał Radziszewski, a backend engineer with over a decade of experience, mostly
+		on new products and in early-stage teams.
+	</p>
+	<p>
+		Most of his experience is in distributed systems and backend development, and more recently in LLM-based
+		products. He has worked mostly in Elixir, but also in Ruby, Python and TypeScript. He has a strong
+		interest in the theoretical foundations of computer science and in interactive programming in the Lisp tradition,
+		and prefers simple software that is
+		deliberately not overengineered.
+	</p>
+	<p><a href={site.linkedin}>LinkedIn</a> · <a href={site.github}>GitHub</a></p>
+</Base>

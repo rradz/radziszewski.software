@@ -1,0 +1,82 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+
+<Base title="Consulting" description="Senior expertise in backend and distributed systems for product teams: new products, persistent problems, architecture review.">
+	<h1>Consulting</h1>
+	<p>
+		Radziszewski Software helps product teams design, build and stabilise backend and distributed systems. It is
+		for teams that need senior expertise without adding headcount.
+	</p>
+	<p>
+		Engagements are led by <a href="/about/">Rafał Radziszewski</a>, who brings over a decade of experience, mostly on new products and in early-stage teams.
+	</p>
+
+	<nav aria-label="Consulting">
+		<a href="#services">Services</a>
+		<a href="#rate">Rate</a>
+		<a href="#expertise">Expertise</a>
+		<a href="#references">References</a>
+		<a href="#contact">Contact</a>
+	</nav>
+
+	<section id="services">
+		<h2>Services</h2>
+		<dl>
+			<dt>New products</dt>
+			<dd>Architecture and delivery of greenfield projects and MVPs, from first design to production, built to validate quickly and grow later.</dd>
+			<dt>Persistent problems</dt>
+			<dd>Diagnosis and resolution of recurring incidents, performance issues and reliability problems.</dd>
+			<dt>Architecture review</dt>
+			<dd>An independent assessment of a design or a running system, delivered as a written report with prioritised recommendations.</dd>
+		</dl>
+	</section>
+
+	<section id="rate">
+		<h2>Rate</h2>
+		<p>€1,050 per day, billed in whole days. Terms for longer engagements are available on request.</p>
+	</section>
+
+	<section id="expertise">
+		<h2>Expertise</h2>
+		<dl>
+			<dt>High-reliability systems</dt>
+			<dd>Healthcare authorization system that powered an entire application suite, handling millions of messages per day.</dd>
+			<dt>Real-time systems</dt>
+			<dd>Real-time messaging that delivered messages faster than the client could animate them.</dd>
+			<dt>AI products</dt>
+			<dd>LLM orchestration, long-term memory and post-processing pipelines for an AI coaching app.</dd>
+			<dt>Data platforms</dt>
+			<dd>Storage and data layer for a machine-learning training data platform.</dd>
+			<dt>Blockchain integration</dt>
+			<dd>Application mechanics integrated with on-chain systems.</dd>
+			<dt>Algorithmic work</dt>
+			<dd>Adapting and implementing algorithms for production, from Elo rating to k-means clustering.</dd>
+			<dt>Performance tuning</dt>
+			<dd>Finding and removing bottlenecks in production code, such as accidentally quadratic hot paths.</dd>
+		</dl>
+	</section>
+
+	<section id="references">
+		<h2>References</h2>
+		<blockquote>
+			<p>“Tenacious, diligent, incredibly smart and deeply, frustratingly sensible. If he called me out on something, he was right almost every time. Thanks to him our quality was high, we shipped loads less bugs and still managed to ship at an incredible rate.”</p>
+			<cite>Christopher Bull, CTO and founder, Ember</cite>
+		</blockquote>
+		<blockquote>
+			<p>“A talented, thoughtful, pragmatic, and resilient engineer who not only takes ownership of tasks and brings them to completion but also works exceptionally well with others.”</p>
+			<cite>Andrew Revak, lead server engineer, Laguna Games</cite>
+		</blockquote>
+		<blockquote>
+			<p>“Knowledgeable on a variety of aspects and direct on feedback, expert at cutting to the chase.”</p>
+			<cite>Bruno Antunes, V7</cite>
+		</blockquote>
+		<p><small>More on <a href={site.linkedin}>LinkedIn</a>.</small></p>
+	</section>
+
+	<section id="contact">
+		<h2>Contact</h2>
+		<p>To discuss a project, write to <a href={`mailto:${site.email}`}>{site.email}</a>. A short description of the problem is enough to start.</p>
+	</section>
+</Base>

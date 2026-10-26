@@ -1,6 +1,11 @@
+// The feed only exists once there is a published post.
 import rss from '@astrojs/rss';
 import { site } from '../data/site';
 import { getPosts } from '../lib/posts';
+
+export async function getStaticPaths() {
+	return (await getPosts()).length > 0 ? [{ params: { feed: 'rss' } }] : [];
+}
 
 export async function GET(context) {
 	const posts = await getPosts();

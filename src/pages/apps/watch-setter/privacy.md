@@ -1,10 +1,10 @@
 ---
 layout: ../../../layouts/Prose.astro
-title: Watch Setter Privacy Policy
+title: Watch Setter privacy policy
 description: Watch Setter does not collect, store, or share any personal data.
 ---
 
-# Watch Setter Privacy Policy
+# Watch Setter privacy policy
 
 Watch Setter does not collect, store, or share any personal data.
 
@@ -17,4 +17,4 @@ the hemisphere chosen for the moon disc. They never leave the phone.
 
 The app has no accounts, no analytics, no advertising, and no third-party code.
 
-Contact: [rafal.radziszewski@gmail.com](mailto:rafal.radziszewski@gmail.com)
+Contact: [rafal@radziszewski.software](mailto:rafal@radziszewski.software)

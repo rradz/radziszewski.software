@@ -1,10 +1,10 @@
 ---
 layout: ../../../layouts/Prose.astro
-title: Watch Setter Support
+title: Watch Setter support
 description: How to use Watch Setter, and how to get help.
 ---
 
-# Watch Setter Support
+# Watch Setter support
 
 Watch Setter is a single screen for setting a mechanical watch.
 
@@ -27,6 +27,6 @@ The screen stays on while the app is open.
 
 ## Contact
 
-Questions or problems: [rafal.radziszewski@gmail.com](mailto:rafal.radziszewski@gmail.com)
+Questions or problems: [rafal@radziszewski.software](mailto:rafal@radziszewski.software)
 
 See also the [privacy policy](/apps/watch-setter/privacy/).

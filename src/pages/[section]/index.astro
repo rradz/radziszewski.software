@@ -1,0 +1,25 @@
+---
+// The blog index only exists once there is a published post.
+import Base from '../../layouts/Base.astro';
+import { getPosts, formatDate } from '../../lib/posts';
+
+export async function getStaticPaths() {
+	return (await getPosts()).length > 0 ? [{ params: { section: 'blog' } }] : [];
+}
+
+const posts = await getPosts();
+---
+
+<Base title="Blog">
+	<h1>Blog</h1>
+	<ul>
+		{
+			posts.map((post) => (
+				<li>
+					<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+					<small><time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time></small>
+				</li>
+			))
+		}
+	</ul>
+</Base>
