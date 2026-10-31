@@ -5,22 +5,29 @@ import { apps } from '../../../data/apps';
 const app = apps.find((a) => a.slug === 'string-setter')!;
 
 const shots = [
-	['1-tighter', 'Standard tuning with the G string selected and flat: the needle points left and Tighter lights up.'],
+	['1-tighter', 'Standard tuning with the G string selected and flat: Tighter lights up.'],
 	['2-in-tune', 'The low E string in tune: the note is green.'],
-	['3-wrong-octave', 'Drop D with the low D selected while the D string an octave up is played: Hearing D3.'],
-	['4-chromatic', 'Chromatic mode naming the note played, with its octave.'],
+	['3-wrong-octave', 'Drop D with the low D selected while the D string is played: the screen shows Hearing D3.'],
+	['4-chromatic', 'The chromatic tuner naming the note played.'],
 ];
 ---
 
-<Base title={app.name} description="A guitar tuner shaped like the guitar: tap a peg, pluck the string, and the sound hole says which way to turn it.">
+<Base title={app.name} description="Tuning made obvious. Tap a peg, pluck the string and turn it the way the screen says, however far out of tune it starts.">
 	<h1>{app.name}</h1>
 	<p>
 		<img src="/apps/string-setter/icon-b8.png" alt="" width="96" height="96">
 	</p>
+	<p>String Setter makes tuning a guitar obvious, even if you’ve never done it before.</p>
 	<p>
-		A guitar tuner shaped like the guitar on your lap. Pick the tuning, tap the peg of the string you are tuning and
-		pluck it. The sound hole shows where the string is and which way to turn the peg. It knows the octave, so the
-		wrong string is called out instead of passing as in tune.
+		The screen is laid out like your guitar’s headstock, with each peg where it sits on the guitar, so you always know
+		which one you’re turning. Tap a peg and the string lights up from that peg to the sound hole. Pluck it and the
+		screen tells you which way to turn: tighter or looser. When the string is in tune, the note turns green and your
+		phone taps once.
+	</p>
+	<p>
+		Every string is tuned to its exact pitch, so however far out of tune it starts, the screen knows which way you
+		need to turn and keeps telling you, tighter or looser, until you’re there. If what you play is far from the
+		target, it shows which note it actually hears.
 	</p>
 	<p>
 		{app.appStoreUrl ? <a href={app.appStoreUrl}>Get it on the App Store</a> : 'Coming soon to the App Store.'}
@@ -40,15 +47,11 @@ const shots = [
 	<h2>Details</h2>
 	<dl>
 		<dt>Tunings</dt>
-		<dd>Standard, half and full step down, drop D and C, open E, D and G, and DADGAD. The pegs relabel to match.</dd>
-		<dt>Which way to turn</dt>
-		<dd>Tighter or Looser lights up across from the needle. The scale opens out near the mark, so the needle moves fast while the string is far off and settles as it gets close. In tune, the note turns green and the phone taps once.</dd>
-		<dt>Wrong string</dt>
-		<dd>A string an octave away, or more than a fifth off, is named as the note heard rather than passed or retuned.</dd>
+		<dd>Standard, half and full step down, Drop D and C, Open E, D and G, and DADGAD.</dd>
 		<dt>Chromatic</dt>
-		<dd>Tap the bridge to name any note played, octave included.</dd>
-		<dt>Nothing collected</dt>
-		<dd>Sound is analysed on the phone as it arrives and never recorded. No network requests, no accounts, no analytics, no ads.</dd>
+		<dd>For anything else, tap the bridge for a standard chromatic tuner that names any note you play.</dd>
+		<dt>Privacy</dt>
+		<dd>Sound is analysed on your phone as it arrives. Nothing is recorded or sent anywhere.</dd>
 	</dl>
 
 	<p><a href="/apps/string-setter/support/">Support</a> · <a href="/apps/string-setter/privacy/">Privacy policy</a></p>

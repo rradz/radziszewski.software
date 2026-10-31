@@ -19,7 +19,7 @@ and slows down as it gets close. Within 3 cents the note turns green and the pho
 one tap.
 
 A string an octave away, or more than a fifth off, is called out as the note heard ("Hearing
-D3"): most likely the wrong string, not one to retune.
+D3"), so a string in the wrong octave never shows as in tune.
 
 **Chromatic** on the bridge names any note you play, octave included, with the needle
 reading flat and sharp.

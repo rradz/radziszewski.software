@@ -16,7 +16,7 @@ export const apps: App[] = [
 	{
 		slug: 'string-setter',
 		name: 'String Setter',
-		tagline: 'Tune a guitar peg by peg.',
+		tagline: 'Guitar tuner, peg by peg.',
 		// appStoreUrl: 'https://apps.apple.com/app/id6828038013',
 	},
 ];
