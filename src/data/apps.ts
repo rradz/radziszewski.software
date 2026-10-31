@@ -13,4 +13,10 @@ export const apps: App[] = [
 		tagline: 'Set a mechanical watch to the second.',
 		// appStoreUrl: 'https://apps.apple.com/app/id6825334623',
 	},
+	{
+		slug: 'string-setter',
+		name: 'String Setter',
+		tagline: 'Tune a guitar peg by peg.',
+		// appStoreUrl: 'https://apps.apple.com/app/id6828038013',
+	},
 ];

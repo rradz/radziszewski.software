@@ -33,3 +33,9 @@ App Store Connect URLs for Watch Setter:
 
 - Support: https://radziszewski.software/apps/watch-setter/support/
 - Privacy: https://radziszewski.software/apps/watch-setter/privacy/
+
+App Store Connect URLs for String Setter:
+
+- Marketing: https://radziszewski.software/apps/string-setter/
+- Support: https://radziszewski.software/apps/string-setter/support/
+- Privacy: https://radziszewski.software/apps/string-setter/privacy/

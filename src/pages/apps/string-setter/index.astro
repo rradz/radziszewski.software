@@ -1,0 +1,55 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { apps } from '../../../data/apps';
+
+const app = apps.find((a) => a.slug === 'string-setter')!;
+
+const shots = [
+	['1-tighter', 'Standard tuning with the G string selected and flat: the needle points left and Tighter lights up.'],
+	['2-in-tune', 'The low E string in tune: the note is green.'],
+	['3-wrong-octave', 'Drop D with the low D selected while the D string an octave up is played: Hearing D3.'],
+	['4-chromatic', 'Chromatic mode naming the note played, with its octave.'],
+];
+---
+
+<Base title={app.name} description="A guitar tuner shaped like the guitar: tap a peg, pluck the string, and the sound hole says which way to turn it.">
+	<h1>{app.name}</h1>
+	<p>
+		<img src="/apps/string-setter/icon-b8.png" alt="" width="96" height="96">
+	</p>
+	<p>
+		A guitar tuner shaped like the guitar on your lap. Pick the tuning, tap the peg of the string you are tuning and
+		pluck it. The sound hole shows where the string is and which way to turn the peg. It knows the octave, so the
+		wrong string is called out instead of passing as in tune.
+	</p>
+	<p>
+		{app.appStoreUrl ? <a href={app.appStoreUrl}>Get it on the App Store</a> : 'Coming soon to the App Store.'}
+		<small>iPhone, iOS 26.</small>
+	</p>
+
+	<ul role="list">
+		{
+			shots.map(([file, alt]) => (
+				<li>
+					<img src={`/apps/string-setter/${file}-b8.jpg`} alt={alt} width="480" height="1044" loading="lazy">
+				</li>
+			))
+		}
+	</ul>
+
+	<h2>Details</h2>
+	<dl>
+		<dt>Tunings</dt>
+		<dd>Standard, half and full step down, drop D and C, open E, D and G, and DADGAD. The pegs relabel to match.</dd>
+		<dt>Which way to turn</dt>
+		<dd>Tighter or Looser lights up across from the needle. The scale opens out near the mark, so the needle moves fast while the string is far off and settles as it gets close. In tune, the note turns green and the phone taps once.</dd>
+		<dt>Wrong string</dt>
+		<dd>A string an octave away, or more than a fifth off, is named as the note heard rather than passed or retuned.</dd>
+		<dt>Chromatic</dt>
+		<dd>Tap the bridge to name any note played, octave included.</dd>
+		<dt>Nothing collected</dt>
+		<dd>Sound is analysed on the phone as it arrives and never recorded. No network requests, no accounts, no analytics, no ads.</dd>
+	</dl>
+
+	<p><a href="/apps/string-setter/support/">Support</a> · <a href="/apps/string-setter/privacy/">Privacy policy</a></p>
+</Base>
