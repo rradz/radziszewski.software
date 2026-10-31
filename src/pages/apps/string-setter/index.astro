@@ -5,10 +5,18 @@ import { apps } from '../../../data/apps';
 const app = apps.find((a) => a.slug === 'string-setter')!;
 
 const shots = [
-	['1-tighter', 'Standard tuning with the G string selected and flat: Tighter lights up.'],
-	['2-in-tune', 'The low E string in tune: the note is green.'],
-	['3-wrong-octave', 'Drop D with the low D selected while the D string is played: the screen shows Hearing D3.'],
-	['4-chromatic', 'The chromatic tuner naming the note played.'],
+	['1-in-tune', 'The low E string in tune: the note is green.'],
+	['2-under', 'The A string flat: Tighter lights up.'],
+	['3-over', 'The D string sharp: Looser lights up.'],
+	['4-tunings', 'The tuning menu, with Drop D chosen.'],
+	['5-chromatic', 'The chromatic tuner naming the note played, flat or sharp.'],
+];
+
+const duoShots = [
+	['1-in-tune', 'iPhone Duo opened out, with every tuning listed beside the guitar: the low E string in tune.'],
+	['2-under', 'iPhone Duo opened out: the A string flat, Tighter lit.'],
+	['3-over', 'iPhone Duo opened out: the D string sharp, Looser lit.'],
+	['4-chromatic', 'iPhone Duo opened out: the chromatic tuner.'],
 ];
 ---
 
@@ -39,6 +47,17 @@ const shots = [
 			shots.map(([file, alt]) => (
 				<li>
 					<img src={`/apps/string-setter/${file}-b8.jpg`} alt={alt} width="480" height="1044" loading="lazy">
+				</li>
+			))
+		}
+	</ul>
+
+	<p><small>On iPhone Duo opened out, every tuning is listed beside the guitar.</small></p>
+	<ul role="list">
+		{
+			duoShots.map(([file, alt]) => (
+				<li>
+					<img src={`/apps/string-setter/duo-${file}-b8.jpg`} alt={alt} width="1044" height="734" loading="lazy">
 				</li>
 			))
 		}

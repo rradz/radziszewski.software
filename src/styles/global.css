@@ -158,10 +158,13 @@ ul[role='list'] {
 ul[role='list'] li {
 	flex: none;
 	margin: 0;
-	width: 11rem;
 }
 
 ul[role='list'] img {
+	display: block;
+	width: auto;
+	max-width: none;
+	height: 24rem;
 	border: 1px solid var(--rule);
 	border-radius: 1.25rem;
 }
