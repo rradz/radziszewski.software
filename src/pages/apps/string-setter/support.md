@@ -15,7 +15,7 @@ open E, D and G, and DADGAD. The pegs relabel to match.
 where the string is, flat to the left and sharp to the right, and the label across from
 it says which way to turn: **Tighter** when the string is low, **Looser** when it is high.
 The scale spreads out near the mark, so the needle moves fast while the string is far off
-and slows down as it gets close. Within 3 cents the note turns green and the phone gives
+and slows down as it gets close. Within 4 cents the note turns green and the phone gives
 one tap.
 
 A string an octave away, or more than a fifth off, is called out as the note heard ("Hearing
