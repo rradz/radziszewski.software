@@ -19,4 +19,10 @@ export const apps: App[] = [
 		tagline: 'Guitar tuner, peg by peg.',
 		// appStoreUrl: 'https://apps.apple.com/app/id6828038013',
 	},
+	{
+		slug: 'adding-calculator',
+		name: 'Adding Calculator',
+		tagline: 'Add up without losing track.',
+		// appStoreUrl: 'https://apps.apple.com/app/id6829219563',
+	},
 ];

@@ -1,0 +1,70 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { apps } from '../../../data/apps';
+
+const app = apps.find((a) => a.slug === 'adding-calculator')!;
+
+const shots = [
+	['1-column', 'A grocery receipt added up: the whole column in view, the sum under the rule.'],
+	['2-split', 'Dinner for four split by four: the share lit under the sum.'],
+	['3-subtract', 'A parts list with − 120 being typed: the sign in the margin, + lit.'],
+	['4-long', 'A long column, the oldest lines fading at the top.'],
+	['5-empty', 'The empty column you start with.'],
+];
+
+const duoShots = [
+	['1-column', 'iPhone Duo opened out, column on the left and keypad on the right: a grocery receipt added up.'],
+	['2-split', 'iPhone Duo opened out: dinner for four split by four.'],
+	['3-subtract', 'iPhone Duo opened out: − 120 being typed.'],
+	['4-long', 'iPhone Duo opened out: a long column.'],
+	['5-empty', 'iPhone Duo opened out: the empty column.'],
+];
+---
+
+<Base title={app.name} description="Did that one go in? Add up a bill or a basket and see every number you entered, in a column, with the total underneath. Nothing to miss, nothing to redo.">
+	<h1>{app.name}</h1>
+	<p>
+		<img src="/apps/adding-calculator/icon-b4.png" alt="" width="96" height="96">
+	</p>
+	<p>
+		You’re adding up a receipt. Halfway down: did that one go in? Did it go in twice? On a normal calculator there’s
+		no way to tell, so you clear it and start again.
+	</p>
+	<p>
+		Adding Calculator keeps every number you enter on the screen, in a column, with the total underneath. You see
+		exactly what went in, like a sum written on paper. A number that’s wrong, doubled or missing is right there to
+		see. Nothing to miss, nothing to redo.
+	</p>
+	<p>
+		Need the same amount three times? One press. Splitting the bill? Divide by how many. Then copy the result and
+		paste it wherever it needs to go.
+	</p>
+	<p>Your column stays until you clear it. Nothing is collected, and nothing leaves your phone.</p>
+	<p>
+		{app.appStoreUrl ? <a href={app.appStoreUrl}>Get it on the App Store</a> : 'Coming soon to the App Store.'}
+		<small>iPhone, iOS 26.</small>
+	</p>
+
+	<ul role="list">
+		{
+			shots.map(([file, alt]) => (
+				<li>
+					<img src={`/apps/adding-calculator/${file}-b4.jpg`} alt={alt} width="480" height="1044" loading="lazy">
+				</li>
+			))
+		}
+	</ul>
+
+	<p><small>On an unfolded phone the column sits on the left and the keypad on the right.</small></p>
+	<ul role="list">
+		{
+			duoShots.map(([file, alt]) => (
+				<li>
+					<img src={`/apps/adding-calculator/duo-${file}-b4.jpg`} alt={alt} width="1044" height="734" loading="lazy">
+				</li>
+			))
+		}
+	</ul>
+
+	<p><a href="/apps/adding-calculator/support/">Support</a> · <a href="/apps/adding-calculator/privacy/">Privacy policy</a></p>
+</Base>

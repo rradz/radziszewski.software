@@ -39,3 +39,9 @@ App Store Connect URLs for String Setter:
 - Marketing: https://radziszewski.software/apps/string-setter/
 - Support: https://radziszewski.software/apps/string-setter/support/
 - Privacy: https://radziszewski.software/apps/string-setter/privacy/
+
+App Store Connect URLs for Adding Calculator:
+
+- Marketing: https://radziszewski.software/apps/adding-calculator/
+- Support: https://radziszewski.software/apps/adding-calculator/support/
+- Privacy: https://radziszewski.software/apps/adding-calculator/privacy/
