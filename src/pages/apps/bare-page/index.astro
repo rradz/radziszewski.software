@@ -5,7 +5,7 @@ import { apps } from '../../../data/apps';
 const app = apps.find((a) => a.slug === 'bare-page')!;
 
 const shots = [
-	['1-page', 'A page of eight lines, each between two fine rules: a gate code, an amount owed, groceries, a parking spot.'],
+	['1-page', 'A page of eight lines separated by fine rules: a gate code, an amount owed, groceries, a parking spot.'],
 	['2-add', 'A new line being written at the end, the rule above it lit.'],
 	['3-line', 'A tap just after $42.50: the caret there and that line’s rules lit.'],
 	['4-dark', 'The same page in dark mode.'],
@@ -35,11 +35,11 @@ const duoShots = [
 		change it, or delete it with one more tap.
 	</p>
 	<p>
-		Every line sits between two fine rules, so the page reads like a list. Copy, share or delete the line you’re on,
+		Fine rules separate the lines, so the page reads like a list. Copy, share or delete the line you’re on,
 		or copy and share the whole page. Paste an amount straight into a line, or add what you copied as a line of its
 		own. Undo steps back through your last few changes, then forgets them.
 	</p>
-	<p>Light or dark, following your phone. Nothing is collected and nothing leaves your phone.</p>
+	<p>Light or dark, following your phone. Nothing is collected, and your page stays on your phone.</p>
 	<p>
 		{app.appStoreUrl ? <a href={app.appStoreUrl}>Get it on the App Store</a> : 'Coming soon to the App Store.'}
 		<small>iPhone, iOS 26.</small>

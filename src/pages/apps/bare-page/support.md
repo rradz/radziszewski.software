@@ -7,7 +7,7 @@ description: How to use Bare Page, and how to get help.
 # Bare Page support
 
 Bare Page is one page of plain text. It opens on your page, ready to read; a line is
-whatever sits between two Returns, and each one has a fine rule above and below it.
+whatever sits between two Returns, and fine rules separate one line from the next.
 
 **Write:** tap **+** to start a new line at the end and type. Tap any line to change it:
 the cursor goes where you tapped. Everything is saved as you type; there is no save button.
