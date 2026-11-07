@@ -1,0 +1,70 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { apps } from '../../../data/apps';
+
+const app = apps.find((a) => a.slug === 'bare-page')!;
+
+const shots = [
+	['1-page', 'A page of eight lines, each between two fine rules: a gate code, an amount owed, groceries, a parking spot.'],
+	['2-add', 'A new line being written at the end, the rule above it lit.'],
+	['3-line', 'A tap just after $42.50: the caret there and that line’s rules lit.'],
+	['4-dark', 'The same page in dark mode.'],
+	['5-empty', 'The empty page you start with.'],
+];
+
+const duoShots = [
+	['1-page', 'iPhone Duo opened out: lines taking turns left and right, read across and down.'],
+	['2-add', 'iPhone Duo opened out: a new line being written at the end.'],
+	['3-line', 'iPhone Duo opened out: a line being edited in place.'],
+	['4-dark', 'iPhone Duo opened out, dark mode.'],
+	['5-empty', 'iPhone Duo opened out: the empty page.'],
+];
+---
+
+<Base title={app.name} description="Open it and your page is there. Tap + and you’re writing. Tap a line to change it or delete it. No folders, no titles, no list of notes: one page, always at hand.">
+	<h1>{app.name}</h1>
+	<p>
+		<img src="/apps/bare-page/icon-b12.png" alt="" width="96" height="96">
+	</p>
+	<p>
+		You just want to put something down: a gate code, a few groceries, the $42.50 you owe a friend. Most notes apps
+		first show you folders, a list of notes and a button for a new one, and every note wants a title.
+	</p>
+	<p>
+		Bare Page is one page. Open it and it’s there. Tap + and you’re writing on a new line at the end. Tap any line to
+		change it, or delete it with one more tap.
+	</p>
+	<p>
+		Every line sits between two fine rules, so the page reads like a list. Copy, share or delete the line you’re on,
+		or copy and share the whole page. Paste an amount straight into a line, or add what you copied as a line of its
+		own. Undo steps back through your last few changes, then forgets them.
+	</p>
+	<p>Light or dark, following your phone. Nothing is collected and nothing leaves your phone.</p>
+	<p>
+		{app.appStoreUrl ? <a href={app.appStoreUrl}>Get it on the App Store</a> : 'Coming soon to the App Store.'}
+		<small>iPhone, iOS 26.</small>
+	</p>
+
+	<ul role="list">
+		{
+			shots.map(([file, alt]) => (
+				<li>
+					<img src={`/apps/bare-page/${file}-b12.jpg`} alt={alt} width="480" height="1044" loading="lazy">
+				</li>
+			))
+		}
+	</ul>
+
+	<p><small>On an unfolded phone the lines take turns left and right, and you write in place.</small></p>
+	<ul role="list">
+		{
+			duoShots.map(([file, alt]) => (
+				<li>
+					<img src={`/apps/bare-page/duo-${file}-b12.jpg`} alt={alt} width="1044" height="734" loading="lazy">
+				</li>
+			))
+		}
+	</ul>
+
+	<p><a href="/apps/bare-page/support/">Support</a> · <a href="/apps/bare-page/privacy/">Privacy policy</a></p>
+</Base>

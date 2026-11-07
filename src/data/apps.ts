@@ -25,4 +25,10 @@ export const apps: App[] = [
 		tagline: 'Add up without losing track.',
 		// appStoreUrl: 'https://apps.apple.com/app/id6829219563',
 	},
+	{
+		slug: 'bare-page',
+		name: 'Bare Page',
+		tagline: 'Two taps to write it down.',
+		// appStoreUrl: 'https://apps.apple.com/app/id6831972919',
+	},
 ];

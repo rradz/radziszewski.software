@@ -45,3 +45,9 @@ App Store Connect URLs for Adding Calculator:
 - Marketing: https://radziszewski.software/apps/adding-calculator/
 - Support: https://radziszewski.software/apps/adding-calculator/support/
 - Privacy: https://radziszewski.software/apps/adding-calculator/privacy/
+
+App Store Connect URLs for Bare Page:
+
+- Marketing: https://radziszewski.software/apps/bare-page/
+- Support: https://radziszewski.software/apps/bare-page/support/
+- Privacy: https://radziszewski.software/apps/bare-page/privacy/
