@@ -33,6 +33,8 @@ it fades. On an unfolded phone the column sits on the left and the keypad on the
 
 The column is saved as you go and stays on your phone.
 
+Requires an iPhone with iOS 26 or later.
+
 ## Contact
 
 Questions or problems: [rafal@radziszewski.software](mailto:rafal@radziszewski.software)

@@ -25,6 +25,8 @@ when quicksetting the date can damage the movement.
 
 The screen stays on while the app is open.
 
+Requires an iPhone with iOS 26 or later.
+
 ## Contact
 
 Questions or problems: [rafal@radziszewski.software](mailto:rafal@radziszewski.software)

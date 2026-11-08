@@ -11,7 +11,7 @@ export const apps: App[] = [
 		slug: 'watch-setter',
 		name: 'Watch Setter',
 		tagline: 'Set a mechanical watch to the second.',
-		// appStoreUrl: 'https://apps.apple.com/app/id6825334623',
+		appStoreUrl: 'https://apps.apple.com/app/id6825334623',
 	},
 	{
 		slug: 'string-setter',

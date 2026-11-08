@@ -36,6 +36,8 @@ so you read across and then down, and you write in place.
 
 The page follows your phone's light or dark setting. It stays on your phone.
 
+Requires an iPhone with iOS 26 or later.
+
 ## Contact
 
 Questions or problems: [rafal@radziszewski.software](mailto:rafal@radziszewski.software)
