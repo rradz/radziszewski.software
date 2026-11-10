@@ -1,0 +1,55 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { apps } from '../../../data/apps';
+
+const app = apps.find((a) => a.slug === 'timer-rack')!;
+
+const shots = [
+	['1-rack', 'Three glasses running: amber 40 minutes, orange 20, red 30, with time left above each; the gold glass set to 5 minutes.'],
+	['2-finished', 'The amber glass finished at 9:38 AM while two others keep running.'],
+	['3-empty', 'Four glasses ready to set, at 1 minute, 5 minutes, 15 minutes and 1 hour.'],
+];
+
+const duoShots = [
+	['1-rack', 'iPhone Duo opened out: three glasses running, one ready to set.'],
+	['2-finished', 'iPhone Duo opened out: one glass finished, two running.'],
+	['3-empty', 'iPhone Duo opened out: four glasses ready to set.'],
+];
+---
+
+<Base title={app.name} description="Dinner in the oven, play time, a call to return: give each its own hourglass and see what’s left on all of them at a glance.">
+	<h1>{app.name}</h1>
+	<p>
+		<img src="/apps/timer-rack/icon-b7.png" alt="" width="96" height="96">
+	</p>
+	<p>The oven needs 40 minutes. Your kid keeps asking how long until play time. You promised to call someone back in half an hour.</p>
+	<p>TimerRack gives each of these its own hourglass, four side by side, so none of them has to live in your head. Drag the sand to set a time and tap to start. Anyone can see what’s left at a glance, even a child who can’t read a clock yet.</p>
+	<p>When one runs out, it rings with its own note and shows when it finished. With the app closed, a notification tells you which glass it was by its colour.</p>
+	<p>The screen stays on while a timer runs. Nothing is collected and nothing leaves the phone.</p>
+	<p>
+		{app.appStoreUrl ? <a href={app.appStoreUrl}>Get it on the App Store</a> : 'Coming soon to the App Store.'}
+	</p>
+
+	<ul role="list">
+		{
+			shots.map(([file, alt]) => (
+				<li>
+					<img src={`/apps/timer-rack/${file}-b7.jpg`} alt={alt} width="480" height="1044" loading="lazy">
+				</li>
+			))
+		}
+	</ul>
+
+	<p><small>On an unfolded phone the same four glasses fill the wider screen.</small></p>
+	<ul role="list">
+		{
+			duoShots.map(([file, alt]) => (
+				<li>
+					<img src={`/apps/timer-rack/duo-${file}-b7.jpg`} alt={alt} width="1044" height="734" loading="lazy">
+				</li>
+			))
+		}
+	</ul>
+
+	<p><a href="/apps/timer-rack/support/">Support</a> · <a href="/apps/timer-rack/privacy/">Privacy policy</a></p>
+</Base>
