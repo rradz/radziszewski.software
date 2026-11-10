@@ -1,12 +1,12 @@
 ---
 layout: ../../../layouts/Prose.astro
-title: TimerRack privacy policy
-description: TimerRack does not collect, store, or share any personal data.
+title: Timer Rack privacy policy
+description: Timer Rack does not collect, store, or share any personal data.
 ---
 
-# TimerRack privacy policy
+# Timer Rack privacy policy
 
-TimerRack does not collect, store, or share any personal data.
+Timer Rack does not collect, store, or share any personal data.
 
 The four timers (each one's set time, and when it ends or ended) are saved on your device
 in the app's own storage, so they survive the app closing. They're included in your own

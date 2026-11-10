@@ -1,12 +1,12 @@
 ---
 layout: ../../../layouts/Prose.astro
-title: TimerRack support
-description: How to use TimerRack, and how to get help.
+title: Timer Rack support
+description: How to use Timer Rack, and how to get help.
 ---
 
-# TimerRack support
+# Timer Rack support
 
-TimerRack is four hourglasses side by side: amber, orange, red and gold. The colour is
+Timer Rack is four hourglasses side by side: amber, orange, red and gold. The colour is
 how you tell them apart, on the screen and in a notification when the app is closed
 ("Amber: time's up"). So it helps to give each thing its own glass, for example amber
 for the oven and red for the call.
@@ -27,7 +27,7 @@ lower down does nothing, so a stray touch can't lose a timer.
 **When it runs out:** the glass rings its own note three times and shows the time it
 finished. Tap it to clear it. The alarm plays even with the silent switch on.
 
-**Off-screen alarms:** the line at the top says whether TimerRack can alert you while
+**Off-screen alarms:** the line at the top says whether Timer Rack can alert you while
 the app is closed. Its Turn on or Turn off opens the app's notification settings. While
 they're on, a notification names the glass by its colour and follows your silent and
 Focus settings.
@@ -35,7 +35,7 @@ Focus settings.
 Timers keep running when you leave the app or it closes. The screen stays on while any
 glass is running or waiting to be cleared.
 
-TimerRack turns with the phone, whichever way you hold it. On an iPhone Duo opened out,
+Timer Rack turns with the phone, whichever way you hold it. On an iPhone Duo opened out,
 the same four glasses fill the wider screen.
 
 Requires an iPhone with iOS 26 or later.
