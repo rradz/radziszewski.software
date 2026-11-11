@@ -35,6 +35,6 @@ export const apps: App[] = [
 		slug: 'timer-rack',
 		name: 'Timer Rack',
 		tagline: 'Four hourglass timers at once.',
-		// appStoreUrl: 'https://apps.apple.com/app/id6832728003',
+		appStoreUrl: 'https://apps.apple.com/app/id6832728003',
 	},
 ];
