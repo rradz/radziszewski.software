@@ -29,7 +29,7 @@ export const apps: App[] = [
 		slug: 'bare-page',
 		name: 'Bare Page',
 		tagline: 'Two taps to write it down.',
-		// appStoreUrl: 'https://apps.apple.com/app/id6831972919',
+		appStoreUrl: 'https://apps.apple.com/app/id6831972919',
 	},
 	{
 		slug: 'timer-rack',
